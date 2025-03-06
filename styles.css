@@ -345,7 +345,7 @@ main {
 .gallery img {
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    object-fit: contain; /* Forces the image to fill the box, cropping if necessary */
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for premium look */
     transition: transform 0.3s ease;
@@ -480,6 +480,9 @@ footer {
     .gallery {
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     }
+    .gallery img {
+        height: 350px; /* Adjusted for tablets */
+    }
     .footer-right {
         flex-direction: column;
     }
@@ -596,6 +599,8 @@ footer {
     }
     .gallery img {
         height: 300px;
+        width: 100%;
+        object-fit: cover; /* Forces the image to fill the box, cropping if necessary */
     }
     .footer-container {
         flex-direction: column;
@@ -626,6 +631,8 @@ footer {
     }
     .gallery img {
         height: 250px;
+        width: 100%;
+        object-fit: cover; /* Forces the image to fill the box, cropping if necessary */
     }
 }
 
